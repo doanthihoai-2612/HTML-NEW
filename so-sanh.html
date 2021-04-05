@@ -10,13 +10,48 @@
 </head>
 <body>
     <header>
-        <h1>Hoai DT</h1>
+        <h1>LION</h1>
     </header>
     <nav>
+        <ul>
         <li><a href="index.html">trang chu</a></li>
-        <li><a href="so-sanh.html">So Sanh khac nhau giua let va var</a></li>
+        <li><a class="nav-active" href="so-sanh.html">So Sanh khac nhau giua let va var</a></li>
         <li><a href="so-sanh-css.html">So Sanh slice, substring, substr</a></li>
         <li><a href="moment.html">MomentsJS</a></li>
+        </ul>
     </nav>
+    
+    <article>
+        <h3>phân biệt var và let</h3>
+        <p>Let:<i> trong ví dụ trên biến j được khai báo sử dụng let. Bạn có thể thấy rằng biến j chỉ được phép sử dụng trong vòng lặp for. Nếu bạn gọi biến j ngoài vòng lặp for thì đều bị lỗi ReferenceError: j is not defined.</i></p>
+        <p>Var:<i> phạm vi của biến var là phạm vi của hàm số chứa phần khai báo biến. Do đó, mặc dù biến i được khai báo trong vòng lặp for, nhưng bạn vẫn có thể gọi đến biến i ở mọi vị trí trong hàm số này. Lúc đầu, giá trị của biến i là undefined, nên khi bạn gọi console.log(i) lần đầu tiên, giá trị in ra là undefined chứ không phải là lỗi ReferenceError: i is not defined.</i>x</p>
+        <div class="code">
+        <pre><code>
+            function varvslet() {
+                console.log(i); // i is undefined due to hoisting
+                console.log(j); // ReferenceError: j is not defined
+              
+                for( var i = 0; i < 3; i++ ) {
+                  console.log("i inside ", i); // 0, 1, 2
+                };
+              
+                console.log("i outside ", i); // 3
+                console.log(j); // ReferenceError: j is not defined
+              
+                for( let j = 0; j < 3; j++ ) {
+                  console.log("j inside ", j); // 0, 1, 2
+                };
+              
+                console.log("i outside ", i); // 3
+                console.log("j outside ", j); // ReferenceError: j is not defined
+              }
+              varvslet();
+        </code></pre>
+        </div>
+        <h3><i>Tham khảo:
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></li>
+        </i></h3>
+    </article>
 </body>
 </html>
