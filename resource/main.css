@@ -55,9 +55,27 @@ nav .nav-active {
     width: 40%;
     
 }
-.xanh{
-    background-color: rgb(164, 172, 180);
+  
+#comment{
+    margin-left: 20px;
+}
+#email{
     width: 50%;
-    font-family: 'Courier New', Courier, monospace;
+}
+#title{
+    width: 50%;
+}
+#content{
+    width: 50%;
+}
+#bl{
+    background-color: rgb(180, 180, 180);
+    width: 20%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+#xnd{
+    background-color: rgb(180, 180, 180) ;
+    width: 30%;
 
-}   
+}
